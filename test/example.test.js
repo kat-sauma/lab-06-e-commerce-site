@@ -1,13 +1,13 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { renderClothing } from '../products/render-clothing.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('should take in a clothing item and return li', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = true;
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = false;
