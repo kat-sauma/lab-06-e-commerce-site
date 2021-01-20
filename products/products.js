@@ -1,5 +1,5 @@
 import { clothesInventory } from './data.js';
-import { renderClothing } from '../render-clothing.js';
+import { renderClothing } from './render-clothing.js';
 
 
 const itemList = document.getElementById('item-list');

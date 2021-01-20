@@ -11,7 +11,7 @@ export const clothesInventory = [
     {
         id: 2,
         name: 'Denim Vest',
-        image: 'assets/denim-vest-velvet-collar.jpg',
+        image: '../assets/denim-vest-velvet-collar.jpg',
         description: 'denim vest with a black suede collar',
         category: 'vintage-tops',
         size: 'medium',
@@ -20,7 +20,7 @@ export const clothesInventory = [
     {
         id: 3,
         name: 'Burberry Ruffle Collared Tee',
-        image: 'assets/burberry-black-top.jpg',
+        image: '../assets/burberry-black-top.jpg',
         description: 'black cotton polo with a ruffled collar',
         category: 'vintage-tops',
         size: 'small',
@@ -30,7 +30,7 @@ export const clothesInventory = [
     {
         id: 4,
         name: 'Beige Suede Button Down',
-        image: 'assets/suede-button-down-top.jpg',
+        image: '../assets/suede-button-down-top.jpg',
         description: 'beige, patterned, suede button down tee shirt with structure',
         category: 'vintage-tops',
         size: 'small',
@@ -40,7 +40,7 @@ export const clothesInventory = [
     {
         id: 5,
         name: 'Purple Stripe Tank',
-        image: 'assets/purple-stripe-tank.jpg',
+        image: '../assets/purple-stripe-tank.jpg',
         description: 'lavender and mint striped spaghetti strap tank with diamond point hem',
         category: 'vintage-tops',
         size: 'medium',
