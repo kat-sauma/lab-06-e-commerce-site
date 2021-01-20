@@ -1,16 +1,11 @@
-
-// {
-//     id: 1,
-//     name: 'blue-silk-top',
-//     image: 'assets/blue-silk-top.jpg',
-//     description: 'blue silk top with a pan collar',
-//     category: 'vintage-tops',
-//     size: 'large',
-//     price: 60
-// }
 export function renderClothing(clothing) {
     const li = document.createElement('li');
-    li.classList.add('list-item');
+    li.classList.add('item-list');
+
+    const itemId = document.createElement('p');
+    itemId.classList.add('item-id');
+    itemId.textContent = `ID: ${clothing.id}`;
+    li.append(itemId);
 
     const img = document.createElement('img');
     img.classList.add('image');

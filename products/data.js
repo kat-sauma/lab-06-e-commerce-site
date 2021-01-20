@@ -1,4 +1,4 @@
-export const clothing = [
+export const clothesInventory = [
     {
         id: 1,
         name: 'Floral Silk Top',
@@ -10,7 +10,7 @@ export const clothing = [
     },
     {
         id: 2,
-        name: 'denim-vest',
+        name: 'Denim Vest',
         image: 'assets/denim-vest-velvet-collar.jpg',
         description: 'denim vest with a black suede collar',
         category: 'vintage-tops',
@@ -19,7 +19,7 @@ export const clothing = [
     },
     {
         id: 3,
-        name: 'burberry-black-tee',
+        name: 'Burberry Ruffle Collared Tee',
         image: 'assets/burberry-black-top.jpg',
         description: 'black cotton polo with a ruffled collar',
         category: 'vintage-tops',
@@ -29,7 +29,7 @@ export const clothing = [
 
     {
         id: 4,
-        name: 'beige-suede-button-down',
+        name: 'Beige Suede Button Down',
         image: 'assets/suede-button-down-top.jpg',
         description: 'beige, patterned, suede button down tee shirt with structure',
         category: 'vintage-tops',
@@ -39,7 +39,7 @@ export const clothing = [
 
     {
         id: 5,
-        name: 'purple-stripe-tank',
+        name: 'Purple Stripe Tank',
         image: 'assets/purple-stripe-tank.jpg',
         description: 'lavender and mint striped spaghetti strap tank with diamond point hem',
         category: 'vintage-tops',
