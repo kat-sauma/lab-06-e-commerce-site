@@ -1,11 +1,11 @@
 export const clothing = [
     {
         id: 1,
-        name: 'blue-silk-top',
-        image: 'assets/blue-silk-top.jpg',
+        name: 'Floral Silk Top',
+        image: '../assets/blue-silk-top.jpg',
         description: 'blue silk top with a pan collar',
         category: 'vintage-tops',
-        size: 'large',
+        size: 'Large',
         price: 60
     },
     {
@@ -23,7 +23,7 @@ export const clothing = [
         image: 'assets/burberry-black-top.jpg',
         description: 'black cotton polo with a ruffled collar',
         category: 'vintage-tops',
-        size: 'small'
+        size: 'small',
         price: 60,
     },
 
@@ -33,6 +33,7 @@ export const clothing = [
         image: 'assets/suede-button-down-top.jpg',
         description: 'beige, patterned, suede button down tee shirt with structure',
         category: 'vintage-tops',
+        size: 'small',
         price: 30,
     },
 
@@ -42,8 +43,7 @@ export const clothing = [
         image: 'assets/purple-stripe-tank.jpg',
         description: 'lavender and mint striped spaghetti strap tank with diamond point hem',
         category: 'vintage-tops',
+        size: 'medium',
         price: 20,
-    },
-
-    {
-]
+    }
+];
