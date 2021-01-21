@@ -5,3 +5,11 @@ export function findById(id, array) {
         }
     }
 }
+
+export function calcLineItem(quantity, price) {
+    const total = quantity * price;
+    Math.round(price * 100) / 100;
+
+    console.log(total);
+    return total;
+}

@@ -1,7 +1,9 @@
 // IMPORT MODULES under test here:
+import { renderLineItems } from '../cart/render-line-items.js';
 import { clothesInventory } from '../products/data.js';
 import { renderClothing } from '../products/render-clothing.js';
-import { findById } from '../utils.js';
+import { calcLineItem, findById } from '../utils.js';
+import { cart } from '../cart/cart-data.js';
 
 const test = QUnit.test;
 
@@ -35,4 +37,32 @@ test('findById should take in a 3 and return the Burberry Ruffle Collared Tee', 
     const actual = findById(3, clothesInventory);
 
     expect.deepEqual(actual, expected);
+});
+
+
+test('calcLineItem should take in 1 item for $60 and returns $60', (expect) => {
+    const quantity = 1;
+    const price = 60;
+
+    const expected = 60;
+
+    const actual = calcLineItem(quantity, price);
+
+    expect.deepEqual(actual, expected);
+});
+
+
+test('should call function findById to iterate through the cart and take price and quantity from id: 1 and return the product name, quantity and price', (expect) => {
+
+    const cartItem = findById(cart, clothesInventory);
+
+    const expected = `<tr><th>Burberry Ruffle Collared Tee</th><th>1</h><th>$60</th></tr>`;
+
+    //Act 
+    // Call the function you're testing and set the result to a     const
+    const actual = renderLineItems(cartItem, clothing);
+
+    //Expect
+    // Make assertions about what is expected versus the actual     result
+    expect.equal(actual.outerHTML, expected);
 });
