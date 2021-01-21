@@ -3,8 +3,8 @@ export function renderClothing(clothing) {
     li.classList.add('item-list');
 
     const itemId = document.createElement('p');
-    itemId.classList.add('item-id');
-    itemId.textContent = `ID: ${clothing.id}`;
+    itemId.classList.add('id');
+    itemId.textContent = `${clothing.id}`;
     li.append(itemId);
 
     const img = document.createElement('img');
