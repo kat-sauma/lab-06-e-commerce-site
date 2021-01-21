@@ -54,15 +54,17 @@ test('calcLineItem should take in 1 item for $60 and returns $60', (expect) => {
 
 test('should call function findById to iterate through the cart and take price and quantity from id: 1 and return the product name, quantity and price', (expect) => {
 
-    const cartItem = findById(cart, clothesInventory);
+    const cartItem = {
+        id: 3,
+        quantity: 1,
+        price: 60.00,
+    };
 
-    const expected = `<tr><th>Burberry Ruffle Collared Tee</th><th>1</h><th>$60</th></tr>`;
+    const denimVest = findById(cartItem.id, clothesInventory);
+    console.log(denimVest);
+    const expected = `<tr><td>Burberry Ruffle Collared Tee</td><td>1</td><td>$60</td></tr>`;
 
-    //Act 
-    // Call the function you're testing and set the result to a     const
-    const actual = renderLineItems(cartItem, clothing);
+    const actual = renderLineItems(cartItem, denimVest);
 
-    //Expect
-    // Make assertions about what is expected versus the actual     result
     expect.equal(actual.outerHTML, expected);
 });

@@ -1,17 +1,16 @@
-import { cart } from './cart-data.js';
-
 export function renderLineItems(cartItem, clothing) {
     const quantity = cartItem.quantity;
 
     const tr = document.createElement('tr');
 
     const nameTd = document.createElement('td');
-    const quantityTd = document.createElement('td');
-    const priceTd = document.createElement('td');
-
     nameTd.textContent = clothing.name;
+
+    const quantityTd = document.createElement('td');
     quantityTd.textContent = quantity;
-    priceTd.textContent = `$${clothingTotal(cart, clothing)}`;
+
+    const priceTd = document.createElement('td');
+    priceTd.textContent = `$${clothingTotal(cartItem, clothing)}`;
 
     tr.append(nameTd, quantityTd, priceTd);
 

@@ -8,7 +8,7 @@ export function findById(id, array) {
 
 export function calcLineItem(quantity, price) {
     const total = quantity * price;
-    Math.round(price * 100) / 100;
+    (Math.round(price * 100) / 100).toFixed(2);
 
     console.log(total);
     return total;
