@@ -1,3 +1,5 @@
+import { calcLineItem } from '../utils.js';
+
 export function renderLineItems(cartItem, clothing) {
     const quantity = cartItem.quantity;
 
@@ -10,13 +12,13 @@ export function renderLineItems(cartItem, clothing) {
     quantityTd.textContent = quantity;
 
     const priceTd = document.createElement('td');
-    priceTd.textContent = `$${clothingTotal(cartItem, clothing)}`;
+    priceTd.textContent = `$${calcLineItem(cartItem, clothing)}`;
 
     tr.append(nameTd, quantityTd, priceTd);
 
     return tr;
 }
 
-export function clothingTotal(cartItem, clothing) {
-    return cartItem.quantity * clothing.price;
-}
+// export function clothingTotal(cartItem, clothing) {
+//     return cartItem.quantity * clothing.price;
+// }
