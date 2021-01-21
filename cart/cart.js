@@ -10,8 +10,7 @@ let total = 0;
 for (let cartItem of cart) {
     const clothing = findById(cartItem.id, clothesInventory);
 
-    const totalForItem = calcLineItem(cartItem, clothing);
-
+    const totalForItem = calcLineItem(cartItem.quantity, clothing.price);
     total = total + totalForItem;
     const tableRowDOM = renderLineItems(cartItem, clothing);
 
