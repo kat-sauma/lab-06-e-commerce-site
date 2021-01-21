@@ -7,9 +7,22 @@ export function findById(id, array) {
 }
 
 export function calcLineItem(quantity, price) {
-    console.log('helloooo', quantity, price);
     const total = quantity * price;
 
-    console.log(total, 'total');
     return total;
+}
+
+export function calcOrderTotal(cartData, clothes) {
+
+    let total = 0;
+
+    for (let item of cartData) {
+        const clothingItem = findById(item.id, clothes);
+        const subTotal = calcLineItem(item.quantity, clothingItem.price);
+
+        total = total + subTotal;
+    }
+
+    return `your new closet total: $${total}`;
+
 }

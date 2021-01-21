@@ -2,8 +2,7 @@
 import { renderLineItems } from '../cart/render-line-items.js';
 import { clothesInventory } from '../products/data.js';
 import { renderClothing } from '../products/render-clothing.js';
-import { calcLineItem, findById } from '../utils.js';
-import { cart } from '../cart/cart-data.js';
+import { calcLineItem, calcOrderTotal, findById } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -52,7 +51,7 @@ test('calcLineItem should take in 1 item for $60 and returns $60', (expect) => {
 });
 
 
-test('should call function findById to iterate through the cart and take price and quantity from id: 1 and return the product name, quantity and price', (expect) => {
+test('renderLineItems function should call function findById to iterate through the cart and take price and quantity from id: 1 and return the product name, quantity and price', (expect) => {
 
     const cartItem = {
         id: 3,
@@ -67,4 +66,57 @@ test('should call function findById to iterate through the cart and take price a
     const actual = renderLineItems(cartItem, denimVest);
 
     expect.equal(actual.outerHTML, expected);
+});
+
+test('calcOrderTotal function should add all line items together to create on Total for whole', (expect) => {
+
+    const cartData = [{
+        id: 1,
+        quantity: 1,
+        price: 60.00
+    },
+    {
+        id: 2,
+        quantity: 1,
+        price: 45.00,
+    },
+    {
+        id: 3,
+        quantity: 1,
+        price: 60.00,
+    }];
+
+    const clothesData = [{
+        id: 1,
+        name: 'Floral Silk Top',
+        image: '../assets/blue-silk-top.jpg',
+        description: 'blue silk top with a pan collar',
+        category: 'vintage-tops',
+        size: 'Large',
+        price: 60.00
+    },
+    {
+        id: 2,
+        name: 'Denim Vest',
+        image: '../assets/denim-vest-velvet-collar.jpg',
+        description: 'denim vest with a black suede collar',
+        category: 'vintage-tops',
+        size: 'medium',
+        price: 45.00
+    },
+    {
+        id: 3,
+        name: 'Burberry Ruffle Collared Tee',
+        image: '../assets/burberry-black-top.jpg',
+        description: 'black cotton polo with a ruffled collar',
+        category: 'vintage-tops',
+        size: 'small',
+        price: 60.00
+    }];
+
+    const expected = `your new closet total: $165`;
+
+    const actual = calcOrderTotal(cartData, clothesData);
+
+    expect.equal(actual, expected);
 });
