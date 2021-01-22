@@ -5,28 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@500;800&family=Shrikhand&family=Syne:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="styles/main.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="assets/yalla-habibi.png" />
+            <a class="home" href="/index.html">
+                <h2>Yalla Habibi!</h2>
+            </a>
+            <a class="shopping-cart" href="/cart/cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M7.441 7h-2.882l4.701-4.702c.198-.198.459-.298.72-.298.613 0 1.02.505 1.02 1.029 0 .25-.092.504-.299.711l-3.26 3.26zm9.118 0h2.883l-4.702-4.702c-.198-.198-.459-.298-.72-.298-.613 0-1.02.505-1.02 1.029 0 .25.092.504.299.711l3.26 3.26zm-16.559 2v2h.643c.577 0 1.061.299 1.343 1h20.03c.28-.699.766-1 1.343-1h.641v-2h-24zm21.213 5h-18.425l1.204 3h16.016l1.205-3zm-16.417 5l1.204 3h12l1.205-3h-14.409z" />
+                </svg></a>
         </div>
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/cry-doll.png" />
-            <h2>
+        <section class="shop-name">
+            <h1>YALLA HABIBI</h1>
+        </section>
+        <section class="home-main-section">
+            <h3>
                 Welcome to LA's little shop of vintage & pre-loved discovers!
-            </h2>
+            </h3>
             <div class="products">
-                <a href="products/products.html">P R O D U C T S</a>
+                <a class="product-page-go" href="./products/products.html"><img
+                        src="assets/iconmonstr-weather-127-96.png" /></a>
             </div>
         </section>
     </main>

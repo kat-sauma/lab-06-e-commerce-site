@@ -1,6 +1,8 @@
 // IMPORT MODULES under test here:
+import { renderLineItems } from '../cart/render-line-items.js';
 import { clothesInventory } from '../products/data.js';
 import { renderClothing } from '../products/render-clothing.js';
+import { calcLineItem, calcOrderTotal, findById } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -8,15 +10,7 @@ test('should take in a clothing item and return li', (expect) => {
 
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li class="list-item">
-        <img class="image" src="../assets/blue-silk-top.jpg" height="200" width="200">
-        <p class="id">1</p>
-        <h3 class="name">Floral Silk Top</h3>
-        <p class="price">$60</p>
-        <p class="size">Size: Large</p>
-        <p class="description">blue silk top with a pan collar</p>
-        <button class="button">Add To Cart</button>
-    </li>`;
+    const expected = `<li class="item-list"><hr><p class="id">1</p><h3 class="name">Floral Silk Top</h3><br><img class="image" src="../assets/blue-silk-top.jpg" height="300" width="300"><p class="price">$60</p><p class="size">Size: Large</p><p class="description">blue silk top with a pan collar</p><button class="button">mine</button></li>`;
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -25,4 +19,104 @@ test('should take in a clothing item and return li', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
+});
+
+
+test('findById should take in a 3 and return the Burberry Ruffle Collared Tee', (expect) => {
+    const expected = {
+        id: 3,
+        name: 'Burberry Ruffle Collared Tee',
+        image: '../assets/burberry-black-top.jpg',
+        description: 'black cotton polo with a ruffled collar',
+        category: 'vintage-tops',
+        size: 'small',
+        price: 60,
+    };
+
+    const actual = findById(3, clothesInventory);
+
+    expect.deepEqual(actual, expected);
+});
+
+
+test('calcLineItem should take in 1 item for $60 and returns $60', (expect) => {
+    const quantity = 1;
+    const price = 60;
+
+    const expected = 60;
+
+    const actual = calcLineItem(quantity, price);
+
+    expect.deepEqual(actual, expected);
+});
+
+
+test('renderLineItems function should call function findById to iterate through the cart and take price and quantity from id: 1 and return the product name, quantity and price', (expect) => {
+
+    const cartItem = {
+        id: 3,
+        quantity: 1,
+        price: 60.00,
+    };
+
+    const denimVest = findById(cartItem.id, clothesInventory);
+    console.log(denimVest);
+    const expected = `<tr><td>Burberry Ruffle Collared Tee</td><td>1</td><td>$60</td></tr>`;
+
+    const actual = renderLineItems(cartItem, denimVest);
+
+    expect.equal(actual.outerHTML, expected);
+});
+
+test('calcOrderTotal function should add all line items together to create on Total for whole', (expect) => {
+
+    const cartData = [{
+        id: 1,
+        quantity: 1,
+        price: 60.00
+    },
+    {
+        id: 2,
+        quantity: 1,
+        price: 45.00,
+    },
+    {
+        id: 3,
+        quantity: 1,
+        price: 60.00,
+    }];
+
+    const clothesData = [{
+        id: 1,
+        name: 'Floral Silk Top',
+        image: '../assets/blue-silk-top.jpg',
+        description: 'blue silk top with a pan collar',
+        category: 'vintage-tops',
+        size: 'Large',
+        price: 60.00
+    },
+    {
+        id: 2,
+        name: 'Denim Vest',
+        image: '../assets/denim-vest-velvet-collar.jpg',
+        description: 'denim vest with a black suede collar',
+        category: 'vintage-tops',
+        size: 'medium',
+        price: 45.00
+    },
+    {
+        id: 3,
+        name: 'Burberry Ruffle Collared Tee',
+        image: '../assets/burberry-black-top.jpg',
+        description: 'black cotton polo with a ruffled collar',
+        category: 'vintage-tops',
+        size: 'small',
+        price: 60.00
+    }];
+
+    const expected = `your new closet total: $165`;
+
+    const actual = calcOrderTotal(cartData, clothesData);
+
+    expect.equal(actual, expected);
 });

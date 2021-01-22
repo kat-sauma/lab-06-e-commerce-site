@@ -8,29 +8,25 @@ body {
     
     --shadow: 0px 10px 20px -12px rgb(166, 162, 234);
 
-    
-    background-color: var(--color3);
-
     /* font-family: 'Big Shoulders Inline Text', cursive;
 font-family: 'Shrikhand', cursive;
 font-family: 'Syne', sans-serif; */
 }
 
 section {
-    background-color: var(--color5);
+    width: 80%;
+    margin-top: 70px;
 }
 
-header {
-    background-color: var(--color4);
+table {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: block;
+    text-align: left;
 }
-
-footer{
-    background-color: var(--color4);
-}
-
 button {
     height: 40px;
-    width: 70px;
+    width: 200px;
     border-bottom-left-radius: 60%;
     border-bottom-right-radius: 60%;
     border-top-right-radius: 160%;
@@ -43,9 +39,4 @@ button {
     font-family: 'shrikhand', cursive;
     font-weight: 100;
     color: var(--color6);
-}
-
-.image {
-    border-color: solid 20px --var(--color1);
-    border-bottom-left-radius: 40%;
 }
