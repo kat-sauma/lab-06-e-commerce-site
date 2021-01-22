@@ -41,6 +41,10 @@ export function renderClothing(clothing) {
     li.append(pDescription);
 
     const button1 = document.createElement('button');
+    button1.addEventListener('click', () => {
+        addToCart()
+    })
+
     button1.classList.add('button');
     button1.textContent = 'mine';
     li.append(button1);
