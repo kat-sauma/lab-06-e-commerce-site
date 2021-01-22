@@ -13,7 +13,7 @@ body {
     --footer-height: 35px;
     
     background-color: var(--color4);
-    background-image: url(/assets/background-pink-drip.jpg) ;
+    background-image: url(../assets/background-pink-drip.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-blend-mode: screen;
