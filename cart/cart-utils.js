@@ -24,6 +24,11 @@ export function getCart() {
     }
 }
 
+export function clearCart() {
+    const stringyDefaultCart = JSON.stringify(defaultEmptyCart);
+    localStorage.setItem(CART, stringyDefaultCart);
+}
+
 export function addToCart(id) {
     const cart = getCart();
     const cartItem = findById(id, cart);

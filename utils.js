@@ -26,3 +26,4 @@ export function calcOrderTotal(cartData, clothes) {
     return `your new closet total: $${total}`;
 
 }
+

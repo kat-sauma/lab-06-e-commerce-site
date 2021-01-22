@@ -47,7 +47,7 @@ export function renderClothing(clothing) {
         addToCart(clothing.id);
     });
 
-    button1.classList.add('button');
+    button1.classList.add('button-add-item');
     button1.textContent = 'mine';
     li.append(button1);
 

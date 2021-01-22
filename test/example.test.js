@@ -3,6 +3,7 @@ import { renderLineItems } from '../cart/render-line-items.js';
 import { clothesInventory } from '../products/data.js';
 import { renderClothing } from '../products/render-clothing.js';
 import { calcLineItem, calcOrderTotal, findById } from '../utils.js';
+import { getCart } from '../cart/cart-utils.js';
 
 const test = QUnit.test;
 
@@ -10,7 +11,7 @@ test('should take in a clothing item and return li', (expect) => {
 
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li class="item-list"><hr><p class="id">1</p><h3 class="name">Floral Silk Top</h3><br><img class="image" src="../assets/blue-silk-top.jpg" height="300" width="300"><p class="price">$60</p><p class="size">Size: Large</p><p class="description">blue silk top with a pan collar</p><button class="button">mine</button></li>`;
+    const expected = `<li class="item-list"><hr><p class="id">1</p><h3 class="name">Floral Silk Top</h3><br><img class="image" src="../assets/blue-silk-top.jpg" height="300" width="300"><p class="price">$60</p><p class="size">Size: Large</p><p class="description">blue silk top with a pan collar</p><button class="button-add-item">mine</button></li>`;
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -119,4 +120,24 @@ test('calcOrderTotal function should add all line items together to create on To
     const actual = calcOrderTotal(cartData, clothesData);
 
     expect.equal(actual, expected);
+});
+
+test('getCart should select the correct cart from local storage', (expect) => {
+    const testCart = [
+        {
+            id: 3,
+            quantity: 2
+        },
+        {
+            id: 4,
+            quantity: 1
+        },
+    ];
+    const stringyCart = JSON.stringify(testCart);
+
+    localStorage.setItem('CART', stringyCart);
+
+    const cart = getCart();
+
+    expect.deepEqual(cart, testCart);
 });
