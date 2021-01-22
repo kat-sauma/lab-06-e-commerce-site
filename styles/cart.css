@@ -1,0 +1,14 @@
+body {
+    --color1: rgb(240, 147, 147);
+    --color2: rgb(95, 26, 213);
+    --color3: rgb(163, 226, 240);
+    --color4: rgb(206, 204, 246);
+    --color5: rgb(246, 230, 185, .3);
+    --color6: rgba(7, 6, 6, .8); 
+    
+    --shadow: 0px 10px 20px -12px rgb(166, 162, 234);
+
+    /* font-family: 'Big Shoulders Inline Text', cursive;
+font-family: 'Shrikhand', cursive;
+font-family: 'Syne', sans-serif; */
+}
