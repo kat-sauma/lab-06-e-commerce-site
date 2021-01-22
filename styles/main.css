@@ -13,7 +13,7 @@ body {
     --footer-height: 35px;
     
     background-color: var(--color4);
-    background-image: url(/assets/pink-background-grid-slime.png);
+    background-image: url("/assets/pink-background-grid-slime.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;

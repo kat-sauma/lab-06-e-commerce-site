@@ -1,3 +1,5 @@
+import { addToCart } from '../cart/cart-utils.js';
+
 export function renderClothing(clothing) {
     const li = document.createElement('li');
     li.classList.add('item-list');
