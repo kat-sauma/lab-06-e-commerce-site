@@ -12,3 +12,31 @@ body {
 font-family: 'Shrikhand', cursive;
 font-family: 'Syne', sans-serif; */
 }
+
+section {
+    width: 80%;
+    margin-top: 70px;
+}
+
+table {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: block;
+    text-align: left;
+}
+button {
+    height: 40px;
+    width: 200px;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    border-top-right-radius: 160%;
+    border-top-left-radius: 60%;
+    font-size: 1rem;
+    background-repeat: no-repeat;
+    background-color: var(--color4);
+    background-position: center;
+    border-color: var(--color4);
+    font-family: 'shrikhand', cursive;
+    font-weight: 100;
+    color: var(--color6);
+}
