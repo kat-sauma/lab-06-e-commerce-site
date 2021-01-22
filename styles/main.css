@@ -12,8 +12,8 @@ body {
     --gutter: 30px;
     --footer-height: 35px;
     
-    background-color: var(--color4);
     background-image: url(/assets/background-pink-drip.jpg) ;
+    background-color: var(--color4);
     background-repeat: no-repeat;
     background-size: 100%;
     background-blend-mode: screen;
