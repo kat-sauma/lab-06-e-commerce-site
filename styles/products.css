@@ -10,13 +10,7 @@ body {
 
     
     background-color: var(--color3);
-    background-image: url(/assets/background-pink-drip.jpg) ;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-blend-mode: screen;
-    font-family: 'Syne', sans-serif;
-    font-size: 22px;
-    color: var(--color6);
+
     /* font-family: 'Big Shoulders Inline Text', cursive;
 font-family: 'Shrikhand', cursive;
 font-family: 'Syne', sans-serif; */

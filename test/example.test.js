@@ -10,7 +10,7 @@ test('should take in a clothing item and return li', (expect) => {
 
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li class="item-list"><p class="id">1</p><img class="image" src="../assets/blue-silk-top.jpg" height="200" width="200"><h3 class="name">Floral Silk Top</h3><p class="price">$60</p><p class="size">Size: Large</p><p class="description">blue silk top with a pan collar</p><button class="button">Add To Cart</button></li>`;
+    const expected = `<li class="item-list"><hr><p class="id">1</p><h3 class="name">Floral Silk Top</h3><br><img class="image" src="../assets/blue-silk-top.jpg" height="300" width="300"><p class="price">$60</p><p class="size">Size: Large</p><p class="description">blue silk top with a pan collar</p><button class="button">mine</button></li>`;
 
     //Act 
     // Call the function you're testing and set the result to a const
