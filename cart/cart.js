@@ -20,7 +20,14 @@ for (let cartItem of cart) {
 const tr = document.createElement('tr');
 const td1 = document.createElement('td');
 const td2 = document.createElement('td');
-const td3 = document.createElement('td');
-// td3.textContent = 'Order Total: $${total}';
-tr.append(td1, td2, td3);
-table.append(tr);
+tr.append(td1, td2);
+
+const tFoot = document.createElement('tfoot');
+const th = document.createElement('th');
+const td4 = document.createElement('td');
+const td5 = document.createElement('td');
+th.textContent = 'Your New Closet Total:';
+td5.textContent = `$${total}`;
+tFoot.append(th, td4, td5);
+
+table.append(tr, tFoot);
