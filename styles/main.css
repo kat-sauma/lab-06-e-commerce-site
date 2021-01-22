@@ -13,8 +13,9 @@ body {
     --footer-height: 35px;
     
     background-color: var(--color4);
-    background-image: url(../assets/background-pink-drip.jpg);
+    background-image: url(/assets/pink-background-grid-slime.png);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: 100%;
     background-blend-mode: screen;
     font-family: 'Syne', sans-serif;

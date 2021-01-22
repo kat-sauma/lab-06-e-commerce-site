@@ -2,6 +2,7 @@ import { cart } from './cart-data.js';
 import { clothesInventory } from '../products/data.js';
 import { renderLineItems } from './render-line-items.js';
 import { findById, calcLineItem } from '../utils.js';
+// import { getCart } from './cart-utils.js';
 
 const table = document.querySelector('table');
 
@@ -31,3 +32,13 @@ td5.textContent = `$${total}`;
 tFoot.append(th, td4, td5);
 
 table.append(tr, tFoot);
+
+const button2 = document.querySelector('button');
+button2.classList.add('button');
+button2.textContent = 'place my order';
+
+button2.addEventListener('click', () => {
+    const cart = getCart();
+
+    alert(JSON.stringify(cart, true, 2));
+});

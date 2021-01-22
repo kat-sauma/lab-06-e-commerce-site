@@ -42,8 +42,8 @@ export function renderClothing(clothing) {
 
     const button1 = document.createElement('button');
     button1.addEventListener('click', () => {
-        addToCart()
-    })
+        addToCart(clothing.id);
+    });
 
     button1.classList.add('button');
     button1.textContent = 'mine';
