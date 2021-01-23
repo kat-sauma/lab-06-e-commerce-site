@@ -1,4 +1,8 @@
 import { addToCart } from '../cart/cart-utils.js';
+import { calcLineItem, findById } from '../utils.js';
+import { getCart } from '../cart/cart-utils.js';
+import { clothesInventory } from './data.js';
+
 
 export function renderClothing(clothing) {
     const li = document.createElement('li');
@@ -42,9 +46,27 @@ export function renderClothing(clothing) {
     pDescription.textContent = `${clothing.description}`;
     li.append(pDescription);
 
+    const dropDown = document.createElement('select');
+    dropDown.classList.add('drop-down-bar');
+    li.append(dropDown);
+
+    const quantityOne = document.createElement('option');
+    quantityOne.textContent = '1';
+    quantityOne.value = 1;
+    dropDown.appendChild(quantityOne);
+    const quantityTwo = document.createElement('option');
+    quantityTwo.textContent = '2';
+    quantityTwo.value = 2;
+    dropDown.appendChild(quantityTwo);
+    const quantityThree = document.createElement('option');
+    quantityThree.textContent = '3';
+    quantityThree.value = 3;
+    dropDown.appendChild(quantityThree);
+
     const button1 = document.createElement('button');
     button1.addEventListener('click', () => {
-        addToCart(clothing.id);
+        const numberOfItems = dropDown.value;
+        addToCart(clothing.id, numberOfItems);
     });
 
     button1.classList.add('button-add-item');

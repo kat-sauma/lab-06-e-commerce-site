@@ -12,7 +12,7 @@ export function setCart(cart) {
 
 export function getCart() {
     const stringyCart = localStorage.getItem(CART);
-    console.log('stringyCart', stringyCart);
+
     if (stringyCart) {
         const parsedCart = JSON.parse(stringyCart);
 
@@ -29,16 +29,16 @@ export function clearCart() {
     localStorage.setItem(CART, stringyDefaultCart);
 }
 
-export function addToCart(id) {
+export function addToCart(id, amount) {
     const cart = getCart();
     const cartItem = findById(id, cart);
-    console.log('cart', cart);
+
     if (cartItem) {
-        cartItem.quantity++;
+        cartItem.quantity += Number(amount);
     } else {
         const newItem = {
             id: id,
-            quantity: 1
+            quantity: Number(amount)
         };
         cart.push(newItem);
     }
