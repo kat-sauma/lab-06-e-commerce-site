@@ -12,8 +12,8 @@ body {
     --gutter: 30px;
     --footer-height: 35px;
     
-    background-color: rgba(206, 204, 246, .4);
-    background-image: url("/assets/pink-background-grid-slime.png");
+    background-color:;
+    background:  rgba(206, 204, 246, .4) url("/assets/pink-background-grid-slime.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
