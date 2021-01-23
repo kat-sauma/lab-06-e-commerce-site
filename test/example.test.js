@@ -3,7 +3,7 @@ import { renderLineItems } from '../cart/render-line-items.js';
 import { clothesInventory } from '../products/data.js';
 import { renderClothing } from '../products/render-clothing.js';
 import { calcLineItem, calcOrderTotal, findById } from '../utils.js';
-import { getCart } from '../cart/cart-utils.js';
+import { getCart, clearCart, setCart } from '../cart/cart-utils.js';
 
 const test = QUnit.test;
 
@@ -11,7 +11,7 @@ test('should take in a clothing item and return li', (expect) => {
 
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li class="item-list"><hr><p class="id">1</p><h3 class="name">Floral Silk Top</h3><br><img class="image" src="../assets/blue-silk-top.jpg" height="300" width="300"><p class="price">$60</p><p class="size">Size: Large</p><p class="description">blue silk top with a pan collar</p><button class="button-add-item">mine</button></li>`;
+    const expected = `<li class="item-list"><hr><p class="id">1</p><h3 class="name">Floral Silk Top</h3><br><img class="image" src="../assets/blue-silk-top.jpg" height="300" width="300"><p class="price">$60</p><p class="size">Size: Large</p><p class="description">blue silk top with a pan collar</p><select class="drop-down-bar"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><button class="button-add-item">mine</button></li>`;
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -140,4 +140,30 @@ test('getCart should select the correct cart from local storage', (expect) => {
     const cart = getCart();
 
     expect.deepEqual(cart, testCart);
+});
+
+test('clearCart should set the cart from local storage to zero after purchase order is made', (expect) => {
+
+    const expected = [];
+
+    clearCart();
+
+    const actual = getCart();
+
+    expect.deepEqual(actual, expected);
+});
+
+test('setCart should send/set the correct quantity and price of an order to the cart in local storage', (expect) => {
+    const testCart = [
+        {
+            id: 3,
+            quantity: 2
+        }
+    ];
+    const stringyCart = JSON.stringify(testCart);
+    const expected = localStorage.setItem('CART', stringyCart);
+
+    const actual = setCart(testCart);
+
+    expect.deepEqual(actual, expected);
 });
