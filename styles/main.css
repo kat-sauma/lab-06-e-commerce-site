@@ -13,8 +13,7 @@ body {
     --footer-height: 35px;
     
     background-color:;
-    background:  rgba(206, 204, 246, .4) url("/assets/pink-background-grid-slime.png");
-    background-repeat: no-repeat;
+    background:  rgba(206, 204, 246, .4) url("/assets/pink-background-grid-slime.png") center no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     background-blend-mode: screen;
