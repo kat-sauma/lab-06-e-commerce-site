@@ -61,7 +61,7 @@ test('renderLineItems function should call function findById to iterate through 
     };
 
     const denimVest = findById(cartItem.id, clothesInventory);
-    console.log(denimVest);
+
     const expected = `<tr><td>Burberry Ruffle Collared Tee</td><td>1</td><td>$60</td></tr>`;
 
     const actual = renderLineItems(cartItem, denimVest);

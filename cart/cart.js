@@ -10,7 +10,7 @@ const cart = getCart();
 let total = 0;
 
 for (let cartItem of cart) {
-    console.log(clothesInventory, cartItem);
+
     const clothing = findById(cartItem.id, clothesInventory);
 
     const totalForItem = calcLineItem(cartItem.quantity, clothing.price);

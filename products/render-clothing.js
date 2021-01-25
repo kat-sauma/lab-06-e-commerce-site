@@ -1,8 +1,4 @@
 import { addToCart } from '../cart/cart-utils.js';
-import { calcLineItem, findById } from '../utils.js';
-import { getCart } from '../cart/cart-utils.js';
-import { clothesInventory } from './data.js';
-
 
 export function renderClothing(clothing) {
     const li = document.createElement('li');
