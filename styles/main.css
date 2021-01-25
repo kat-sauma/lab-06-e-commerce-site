@@ -17,9 +17,9 @@ body {
     --footer-height: 35px;
     
 
-    background:  rgba(206, 204, 246) url("../assets/pink-background-grid-slime.png") cover center no-repeat;
+    background:  rgba(206, 204, 246) url("../assets/pink-background-grid-slime.png") center no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
     background-blend-mode: screen;
     font-family: 'Syne', sans-serif;
     font-size: 22px;
