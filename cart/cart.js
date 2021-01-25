@@ -46,5 +46,5 @@ button2.addEventListener('click', () => {
 
     alert(JSON.stringify(cart, true, 2));
     clearCart();
-    window.location.href = '/index.html';
+    window.location.href = '../index.html';
 });
