@@ -43,7 +43,6 @@ button2.textContent = 'place my order';
 if (cart.length === 0) button2.disabled = 'true';
 
 button2.addEventListener('click', () => {
-
     alert(JSON.stringify(cart, true, 2));
     clearCart();
     window.location.href = '../index.html';

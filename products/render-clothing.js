@@ -4,7 +4,7 @@ export function renderClothing(clothing) {
     const li = document.createElement('li');
     li.classList.add('item-list');
 
-    const line = document.createElement('hr')
+    const line = document.createElement('hr');
     li.append(line);
 
     const itemId = document.createElement('p');
