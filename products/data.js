@@ -15,7 +15,7 @@ export const clothesInventory = [
         description: 'denim vest with a black suede collar',
         category: 'vintage-tops',
         size: 'medium',
-        price: 45,
+        price: 45
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const clothesInventory = [
         description: 'black cotton polo with a ruffled collar',
         category: 'vintage-tops',
         size: 'small',
-        price: 60,
+        price: 60
     },
 
     {
@@ -34,7 +34,7 @@ export const clothesInventory = [
         description: 'beige, patterned, suede button down tee shirt with structure',
         category: 'vintage-tops',
         size: 'small',
-        price: 30,
+        price: 30
     },
 
     {
@@ -44,6 +44,6 @@ export const clothesInventory = [
         description: 'lavender and mint striped spaghetti strap tank with diamond point hem',
         category: 'vintage-tops',
         size: 'medium',
-        price: 20,
+        price: 20
     }
 ];

@@ -5,28 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/products.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@500;800&family=Shrikhand&family=Syne:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./styles/reset.css"> -->
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="assets/yalla-habibi.png" />
+            <a id="home" class="home" href="/index.html">
+                <h2>Yalla Habibi!</h2>
+            </a>
+            <a class="product-page-icon" href="./products/products.html"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="44" height="44" viewBox="0 0 24 24">
+                    <path
+                        d="M22 22h-1c0-5.394-3.327-8-7-8-3.608 0-7 2.558-7 8h-1c0-6.117 3.935-9 8-9 4.035 0 8 2.877 8 9zm-8-11c-5.046 0-10 3.661-10 11h1c0-6.724 4.475-10 9-10 4.524 0 9 3.257 9 10h1c0-7.382-5.017-11-10-11zm0 4c-3.176 0-6 2.205-6 7h1c0-4.111 2.264-6 5-6 2.607 0 5 1.747 5 6h1c0-4.831-2.875-7-6-7zm-9.671-1.002c-1.286-.014-2.329-1.029-2.329-2.276 0-2.118 2.103-2.597 3.488-2.512-.051-1.356.137-5.21 4.012-5.21 3.622 0 4.185 3.472 4.032 5.022 1.812-.071 3.448.234 5.042.892-.59-1.231-1.748-2.149-3.152-2.397-.169-3.074-2.75-5.517-5.922-5.517-3.172 0-5.753 2.443-5.922 5.516-2.033.36-3.578 2.105-3.578 4.206 0 1.996 1.397 3.658 3.278 4.131.306-.664.654-1.287 1.051-1.855z" />
+                </svg></a>
+            <a class="shopping-cart" href="./cart/cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="34"
+                    height="34" viewBox="0 0 24 24">
+                    <path
+                        d="M7.441 7h-2.882l4.701-4.702c.198-.198.459-.298.72-.298.613 0 1.02.505 1.02 1.029 0 .25-.092.504-.299.711l-3.26 3.26zm9.118 0h2.883l-4.702-4.702c-.198-.198-.459-.298-.72-.298-.613 0-1.02.505-1.02 1.029 0 .25.092.504.299.711l3.26 3.26zm-16.559 2v2h.643c.577 0 1.061.299 1.343 1h20.03c.28-.699.766-1 1.343-1h.641v-2h-24zm21.213 5h-18.425l1.204 3h16.016l1.205-3zm-16.417 5l1.204 3h12l1.205-3h-14.409z" />
+                </svg></a>
         </div>
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/cry-doll.png" />
-            <h2>
+        <section class="shop-name">
+            <h1>YALLA HABIBI</h1>
+        </section>
+        <section class="home-main-section">
+            <h3>
                 Welcome to LA's little shop of vintage & pre-loved discovers!
-            </h2>
+            </h3>
             <div class="products">
-                <a href="products/products.html">P R O D U C T S</a>
+                <a class="product-page-go" href="./products/products.html"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="150" height="150" viewBox="0 0 24 24">
+                        <path
+                            d="M22 22h-1c0-5.394-3.327-8-7-8-3.608 0-7 2.558-7 8h-1c0-6.117 3.935-9 8-9 4.035 0 8 2.877 8 9zm-8-11c-5.046 0-10 3.661-10 11h1c0-6.724 4.475-10 9-10 4.524 0 9 3.257 9 10h1c0-7.382-5.017-11-10-11zm0 4c-3.176 0-6 2.205-6 7h1c0-4.111 2.264-6 5-6 2.607 0 5 1.747 5 6h1c0-4.831-2.875-7-6-7zm-9.671-1.002c-1.286-.014-2.329-1.029-2.329-2.276 0-2.118 2.103-2.597 3.488-2.512-.051-1.356.137-5.21 4.012-5.21 3.622 0 4.185 3.472 4.032 5.022 1.812-.071 3.448.234 5.042.892-.59-1.231-1.748-2.149-3.152-2.397-.169-3.074-2.75-5.517-5.922-5.517-3.172 0-5.753 2.443-5.922 5.516-2.033.36-3.578 2.105-3.578 4.206 0 1.996 1.397 3.658 3.278 4.131.306-.664.654-1.287 1.051-1.855z" />
+                    </svg></a>
             </div>
         </section>
     </main>

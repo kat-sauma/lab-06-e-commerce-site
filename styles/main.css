@@ -1,25 +1,32 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
 
 body {
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-/* 
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
+    --color1: rgb(240, 147, 147);
+    --color2: rgb(95, 26, 213);
+    --color3: rgb(163, 226, 240);
+    --color4: rgb(206, 204, 246);
+    --color5: rgb(246, 230, 185, .3);
+    --color6: rgba(7, 6, 6, .8); 
     
     --header-height: 80px;
-    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --shadow: 0px 10px 20px -12px rgb(166, 162, 234);
     --gutter: 30px;
-    --footer-height: 25px;
+    --footer-height: 35px;
     
-    font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+
+    background:  rgba(206, 204, 246) url("../assets/pink-background-grid-slime.png") center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: screen;
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    color: var(--color6);
+    /* font-family: 'Big Shoulders Inline Text', cursive;
+font-family: 'Shrikhand', cursive;
+font-family: 'Syne', sans-serif; */
 }
 
 main {
@@ -32,22 +39,25 @@ main {
 
 section {
     background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
+    max-width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: solid 2.5px var(--color1);
+    
 }
 
 header {
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: start;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -58,27 +68,40 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+    font-family: 'Shrikhand', cursive;
 }
 
+h1{
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-weight: 800;
+    font-size: 130px;
+    color: rgba(206, 204, 246, .6);
+}
 
 h2 {
-    font-size: 1.8rem;
+    display: inline-flex;
+    font-size: 2.5rem;
     font-weight: bold;
+    font-family: 'Shrikhand', cursive;
+    color: var(--color6); 
 }
+
+h3 {
+    display: inline-flex;
+    font-size: 2rem;
+    font-family: 'Shrikhand', cursive;
+    color: var(--color6); 
+}
+
 
 .gutter-right {
-    margin-right: 20px;
+    width: 100%;
+    height: var(--footer-height);
 }
 
-.main-logo {
+button {
     animation: pulse 50s infinite ease-in-out;
 }
-
-header img {
-    height: var(--header-height);
-}
-
-
 
 content {
     width: 80%;
@@ -97,8 +120,18 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+    font-size: 1.1rem;
 }
-  
+
+.home {
+    text-decoration: none;
+}
+
+.shop-name {
+    background: none;
+    border: none;
+}
+
   @keyframes pulse {
     20% {
       transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
